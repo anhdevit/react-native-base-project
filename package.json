@@ -1,5 +1,5 @@
 {
-  "name": "RNBase",
+  "name": "VHM",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,23 +7,94 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "podinstall": "cd ios; pod install; cd ..",
+    "images": "node scripts/images.js",
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/VHM/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'"
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
+    "@react-native-community/async-storage": "^1.8.1",
+    "@react-native-community/blur": "^3.4.1",
+    "@react-native-community/netinfo": "^5.7.0",
+    "@react-navigation/bottom-tabs": "^5.2.0",
+    "@react-navigation/drawer": "^5.3.4",
+    "@react-navigation/material-top-tabs": "^5.1.7",
+    "@react-navigation/native": "^5.0.9",
+    "@react-navigation/stack": "^5.1.1",
+    "@reduxjs/toolkit": "^1.2.5",
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "class-transformer": "^0.2.3",
+    "i18n-js": "^3.5.1",
+    "i18next": "^19.3.4",
+    "moment": "^2.24.0",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-i18next": "^11.3.4",
+    "react-native": "0.62.2",
+    "react-native-android-open-settings": "^1.3.0",
+    "react-native-bundle-splitter": "^1.0.7",
+    "react-native-device-info": "^5.5.4",
+    "react-native-elements": "^1.2.7",
+    "react-native-fast-image": "^8.1.5",
+    "react-native-gesture-handler": "^1.6.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.1",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-masked-text": "^1.13.0",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-material-textfield": "^0.16.1",
+    "react-native-modal": "^11.5.6",
+    "react-native-modal-datetime-picker": "^8.5.4",
+    "react-native-onesignal": "^3.7.2",
+    "react-native-permissions": "^2.0.10",
+    "react-native-picker-select": "^6.6.0",
+    "react-native-reanimated": "^1.7.0",
+    "react-native-render-html": "^4.2.0",
+    "react-native-responsive-screen": "^1.4.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-safe-area-view": "^1.0.0",
+    "react-native-screens": "^2.3.0",
+    "react-native-slider": "^0.11.0",
+    "react-native-spinkit": "^1.5.0",
+    "react-native-startup-time": "^1.2.2",
+    "react-native-svg": "^12.0.3",
+    "react-native-vector-icons": "^6.6.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-form": "^8.3.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "resolutions": {
+    "react-native-webview": "8.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/runtime": "^7.9.6",
     "@react-native-community/eslint-config": "^1.1.0",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.27",
     "babel-jest": "^26.0.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-plugin-transform-typescript-metadata": "^0.3.0",
     "eslint": "^6.8.0",
+    "husky": "^3.1.0",
     "jest": "^26.0.1",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.11.0"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/resources/fonts"
+    ]
   }
 }

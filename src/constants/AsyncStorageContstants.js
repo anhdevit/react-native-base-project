@@ -1,0 +1,5 @@
+export const AsyncStorageContstants = {
+  AUTH_GUEST_TOKEN: 'AUTH_GUEST_TOKEN',
+  AUTH_USER_TOKEN: 'AUTH_USER_TOKEN',
+  AUTH_EMAIL: 'AUTH_EMAIL',
+}

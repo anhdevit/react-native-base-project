@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@features/*": [
+        "src/features/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@reducers/*": [
+        "src/reducers/*"
+      ],
+      "@res/*": [
+        "src/resources/*"
+      ],
+      "@utility": [
+        "src/utility/*"
+      ],
+    }
+  }
+}
