@@ -4,21 +4,12 @@
  */
 
 import colors from '@config/colors';
-import { goBack, navigate } from '@navigation/RootNavigation';
+import { goBack } from '@navigation/RootNavigation';
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { connect } from 'react-redux';
-import {
-  resetFilter,
-  setDirectionApartment,
-  setFloorApartment,
-  setStatusApartment,
-  setTypeApartment,
-  setIsCallGetNewDataSearch
-} from '../search/searchHomeSlice';
-import ElementPrice from './ElementPrice';
-import ElementSelect from './ElementSelect';
+import { resetFilter, setDirectionApartment, setFloorApartment, setIsCallGetNewDataSearch, setStatusApartment, setTypeApartment } from '../search/searchHomeSlice';
 import ListElement from './ListElement';
 import { styles } from './styles';
 
@@ -39,11 +30,6 @@ function FilterScreen(props) {
   return (
     <View style={styles.container} >
       <ScrollView>
-        {/* <ElementSelect
-          title={'Tỉnh thành phố'}
-          value={'Hà Nội'}
-          onSelect={() => navigate('city')}
-        /> */}
         <ListElement
           title={'Chọn cách thứ filter'}
           data={typeApartmentFilter}
