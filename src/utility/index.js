@@ -28,50 +28,11 @@ export const regexPhone = phone => {
   return strongRegex.test(phone);
 };
 
-import { PermissionsAndroid, Alert, Platform, Linking } from 'react-native';
-import i18n from '../translations/vi.json';
-import * as Bluebird from 'bluebird';
-import Permissions from 'react-native-permissions';
-import { navigate } from "@navigation/RootNavigation";
 import { signInInsideApp } from "@features/auth/authSlice";
+import { Alert, Linking, Platform } from 'react-native';
+import i18n from '../translations/vi.json';
 
 const ios = Platform.OS == 'ios' ? true : false;
-
-export const checkStoragePermissions = async () => {
-  try {
-    let readPer = PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE;
-    let writePer = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
-    let chckStoragePermission = await PermissionsAndroid.check(
-      readPer,
-      writePer,
-    );
-
-    if (!chckStoragePermission) {
-      let granted = await PermissionsAndroid.requestMultiple(
-        [readPer, writePer],
-        {
-          title: i18n.checkout.permission_access,
-          message: i18n.checkout.message_permission_access,
-          buttonNegative: i18n.checkout.cancel,
-          buttonPositive: i18n.checkout.accept,
-        },
-      );
-      if (
-        granted[readPer] !== PermissionsAndroid.RESULTS.GRANTED ||
-        granted[writePer] !== PermissionsAndroid.RESULTS.GRANTED
-      ) {
-        alert(i18n.checkout.please_grant_storage_permission);
-        return Bluebird.resolve(null);
-      } else {
-        return Bluebird.resolve(true);
-      }
-    } else {
-      return Bluebird.resolve(true);
-    }
-  } catch (error) {
-    return Bluebird.reject(error);
-  }
-};
 
 export const goToAppSettings = text => {
   // Permissions.request("camera").then(response => {
