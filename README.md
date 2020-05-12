@@ -5,14 +5,8 @@
   if (userLogin) {
   - AuthStack - SignIn - SingUp - ForgotPassword
     } else {
-  - Drawer - MainStack - HomeUserTabs(BottomTab) - Search - Cart - CheckoutStack - Deal - Sale - Table - Infomation
+  - Drawer - MainStack - HomeUserTabs(BottomTab) - Search
     }
-
-## 1, Build Ios device
-
-- mobileprovision: ios/anhdev_Development.mobileprovision
-- development cer: ios/ios_development.cer
-- p12: ios/Certificates.p12 -> pass: <no password required>
 
 ## Localize
 
